@@ -28,10 +28,9 @@ public class MailServiceImpl implements MailService {
 			String htmlContent = "<div style='width:400px;height:400px;margin:auto;border:1px solid black;'>"+mailDTO.getMessage()+"</div>";
 			mailHandler.setText(htmlContent, true);
 			//첨부파일
-			//String filepath = "D:\\api_dev\\email\\src\\main\\webapp\\resources\\file\\";
-			//mailHandler.setAttach("profile.png", "profile.png");
+			mailHandler.setAttach("test.txt", "file/test.txt");
 			//이미지삽입
-			//mailHandler.setInline("profile", "/resources/file/profile.png");
+			//mailHandler.setInline("profile.png", "file/profile.png");
 			mailHandler.send();
 			
 		}catch(Exception e) {
